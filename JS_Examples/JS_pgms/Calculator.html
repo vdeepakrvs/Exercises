@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+	<head>
+		<script>
+		function calc(a){
+		var x = document.getElementById("input1").value;
+		var y = document.getElementById("input2").value;
+		if(a=="add")
+		document.getElementById('demo').value = parseInt(x)+parseInt(y);
+		else if(a=="sub")
+		document.getElementById('demo').value = parseInt(x)-parseInt(y);
+		else if(a=="mul")
+		document.getElementById('demo').value = parseInt(x)*parseInt(y);
+		else if(a=="div")
+		document.getElementById('demo').value = parseInt(x)/parseInt(y);
+		}
+		</script>
+	</head>
+	<body>
+	Enter the first value:
+	<input type="text" name =" Enter the first value" id="input1" ></br></br></br>
+	Enter sencond value:
+	<input type="text" name=" Enter sencond value" id="input2" ></br></br>
+	<button value ="add" onclick="calc(this.value)"> + </button>
+	<button value ="sub" onclick="calc(this.value)"> - </button>
+	<button value ="mul" onclick="calc(this.value)"> * </button>
+	<button value ="div" onclick="calc(this.value)"> / </button>
+	<input type="text" name="result"  id="demo" />
+	</body>
+</html>

@@ -1,0 +1,174 @@
+//STRING OPERATIONS//
+<!Doctype html>
+<html>
+	<head>
+		<title>STRING OPERATIONS</title>
+		<script>
+		function stringops(a)
+		{
+			var x = document.getElementById("stn_ops").value;
+			if (a=="concat")
+			{
+				document.getElementById("stn_ops_2").style.display = 'block';
+				document.getElementById("submit").style.display = 'block';
+				/*(function submit(b){
+
+					var y = document.getElementById("stn_ops_2").value;
+					var z = x.concat(y);
+					document.getElementById("output").innerHTML = z;
+				})();
+				*/
+			}
+			else
+			{
+				document.getElementById("stn_ops_2").style.display = 'none';
+				document.getElementById("submit").style.display = 'none';
+			}
+			if (a=="charat")
+				{
+					debugger;
+					var cat = x.charAt(x.length-1);// returns the value of index of that string
+					document.getElementById("output").innerHTML = cat;
+				}
+				
+				if (a=="charCodeAt")
+				{
+					debugger;
+					var cat = x.charCodeAt(x.length-1); // returns unicode value of the string
+					document.getElementById("output").innerHTML = cat;
+				}
+					if (a=="fromCharCode")
+				{
+					debugger;
+					var cat = x.fromCharCode(65); // Convert a Unicode number into a character
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a=="concat")
+				{
+					debugger;
+					document.getElementById("stn_ops_2").style.display="block";
+				}
+				if (a=="lastIndexOf") //returns the position of the last occurrence of a specified value in a string
+				{
+					debugger;
+					var cat = x.lastIndexOf("k");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "match") // returns the matched strings in the given input
+				{
+					debugger;
+					var cat = x.match(/are/gi); // g stands for global and i stands for case sensitive... it will return the value "are" in the given input globally either caps or small
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "replace") // replace the given string value with the existihg one
+				{
+					debugger;
+					var cat = x.replace("are", 'was');
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "search")  //representing the position of the first occurrence of the specified searchvalue, or -1 if no match is founds
+				{
+					var cat = x.search("are");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a=="slice") //The slice() method extracts parts of a string and returns the extracted parts in a new string. Use a negative number to select from the end of the string.
+				{
+					var cat = x.slice(1,5)
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "split") //The split() method is used to split a string into an array of substrings, and returns the new array.
+				{
+					debugger;
+					var cat = x.split("o");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a=="substr") // The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.
+				{
+					var cat = x.substr(0,1);
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a=="substring") // Extracts the characters from a string, between two specified indices
+				{
+					var cat = x.substring(0,1);
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "toUpperCase") // change all to uppercase
+				{
+					var cat = x.toUpperCase("how");
+					document.getElementById("output").innerHTML = cat;
+				}
+					if (a== "toLowerCase") // change all to uppercase
+				{
+					var cat = x.toLowerCase("how");
+					document.getElementById("output").innerHTML = cat;
+				}
+					if (a== "toString") // change all number to string
+				{
+					var cat = x.toString();
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "toLocaleUpperCase") //  toLocaleUpperCase() method converts a string to uppercase letters, according to the host's current locale.
+				{
+					var cat = x.toLocaleUpperCase("how");
+					document.getElementById("output").innerHTML = cat;
+				}
+					if (a== "toLocaleLowerCase") //  toLocaleLowerCase() method converts a string to lowercase letters, according to the host's current locale.
+				{
+					var cat = x.toLocaleLowerCase("how");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "trim") // The trim() method removes whitespace from both sides of a string.
+				{
+					var cat = x.trim();
+					document.getElementById("output").innerHTML = cat;
+				}
+				if (a== "valueOf") // The valueOf() method returns the primitive value of a String object.
+				{
+					debugger;
+					var cat = x.valueOf();
+					document.getElementById("output").innerHTML = cat;
+				}
+		}
+		function submit(){
+					debugger;
+					var m = document.getElementById("stn_ops").value;
+					var y = document.getElementById("stn_ops_2").value;
+					var z = m.concat(y);
+					document.getElementById("output").innerHTML = z;
+				}
+		</script>
+	</head>
+	<body>
+		<h2>STRING OPERATIONS</h2>
+		<h3>Enter the String:</h3>
+		<input type="text" id="stn_ops"/>
+		<input type="text" style="display:none;" id="stn_ops_2"/>
+		<select id="charat" onchange ="stringops(this.value)">
+			<option value=""></option>
+			<option value="charat">charAt()</option>
+			<option value="charCodeAt">charCodeAt()</option>
+			<option value="concat">concat()</option>
+			<option value="fromCharCode">fromCharCode()</option>
+			<option value="lastIndexOf">lastIndexOf()</option>
+			<option value="localeCompare">localeCompare()</option>
+			<option value="match">match()</option>
+			<option value="replace">replace()</option>
+			<option value="search">search()</option>
+			<option value="slice">slice()</option>
+			<option value="split">split()</option>
+			<option value="substr">substr()</option>
+			<option value="substring">substring()</option>
+			<option value="toLocaleLowerCase">toLocaleLowerCase()</option>
+			<option value="toLocaleUpperCase">toLocaleUpperCase()</option>
+			<option value="toLowerCase">toLowerCase()</option>
+			<option value="toString">toString()</option>
+			<option value="toUpperCase">toUpperCase()</option>
+			<option value="trim">trim()</option>
+			<option value="valueOf">valueOf()</option>
+		</select>
+		<div >
+		<input type="button" onclick ="submit()" name="submit" value="submit" id="submit" style = "display:none;">
+		</div>
+		<h4>Output: <span id="output"></span></h4>
+	</body>
+</html>

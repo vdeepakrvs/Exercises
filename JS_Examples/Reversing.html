@@ -1,0 +1,33 @@
+//Reverse > Reverse a string//
+
+<!Doctype html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h2>Reverse a string</h2>
+		<h3>Enter the text:</h3>
+		<input type="text" id="Reverse" />
+		<input type="button" id="submit" value="clickme" onclick="callrev()"/>
+		<h4>Output: <span id="demo"></span></h4>
+		<script type="text/javascript">
+			function callbtn(a)
+			{
+				var b="";
+				var y=a.length-1;
+				for (i=y; i>=0; i--)
+				{
+					debugger;
+					b += a[i];
+				}
+				return b;
+			}
+			function callrev()
+			{
+				var x = document.getElementById("Reverse").value;
+				document.getElementById("demo").innerHTML = callbtn(x);
+			}
+		</script>
+	</body>
+</html>

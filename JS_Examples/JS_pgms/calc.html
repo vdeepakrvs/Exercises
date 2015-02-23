@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function result(x)
+{
+var x1 =  document.getElementById('txt1').value;
+var y1 =  document.getElementById('txt2').value;
+if(x == "add")
+document.getElementById('result').value = parseInt(x1) + parseInt(y1);
+else if(x == "sub")
+document.getElementById('result').value = parseInt(x1) - parseInt(y1);
+else if(x == "mul")
+document.getElementById('result').value = parseInt(x1) * parseInt(y1);
+else if(x == "div")
+document.getElementById('result').value = parseInt(x1) / parseInt(y1);
+}
+</script>
+</head>
+<body>
+<input type="text" name="txt1"  id="txt1" value="0" placeholder="Number 1"/>
+<input type="text" name="txt2"  id="txt2" value="0" placeholder="Number 2"/>
+<br/>
+Result is :
+<input type="text" name="result"  id="result" placeholder="Result"/>
+<br/>
+<button value="add" onClick="result(this.value)">Addition</button>
+<button value="sub" onClick="result(this.value)">Subtraction</button>
+<button value="mul" onClick="result(this.value)">Multiplication</button>
+<button value="div" onClick="result(this.value)">Division</button>
+</body>
+</html>

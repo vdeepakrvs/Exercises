@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+	<head>
+		<script>
+		function calc(a){
+		var x = document.getElementById("input1").value;
+		var y = document.getElementById("input2").value;
+		var z;
+		switch(a){
+		case '+': 
+		z = parseInt(x)+parseInt(y);
+		break;
+		case '-': 
+		z =  parseInt(x)-parseInt(y);
+		break;
+		case '*': 
+		z =  parseInt(x)*parseInt(y);
+		break;
+		case '/': 
+		z =  parseInt(x)/parseInt(y);
+		break;
+		default:
+		z = "No value";
+		}
+		document.getElementById("demo").value = z;
+
+		}
+		</script>
+	</head>
+	<body>
+	Enter the first value:
+	<input type="text" name =" Enter the first value" id="input1" ></br></br></br>
+	Enter sencond value:
+	<input type="text" name=" Enter sencond value" id="input2" ></br></br>
+	<button value ="+" onclick="calc(this.value)"> + </button>
+	<button value ="-" onclick="calc(this.value)"> - </button>
+	<button value ="*" onclick="calc(this.value)"> * </button>
+	<button value ="/" onclick="calc(this.value)"> / </button>
+	<input type="text" name="result"  id="demo" />
+	</body>
+</html>

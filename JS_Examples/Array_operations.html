@@ -1,0 +1,121 @@
+//ARRAY OPERATIONS//
+<!Doctype html>
+<html>
+	<head>
+		<title>ARRAY OPERATIONS</title>
+		<script>
+			function arrayops(a)
+			{
+				debugger;
+			   var fruits = ["Banana", "Orange", "Apple", "Mango", "Banana", "Orange", "Apple", "Mango"];
+			   var veg=["tomato","potato","eggplant"];
+
+				if(a=="indexOf")
+				{
+					var cat = fruits.indexOf("Apple");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="lastIndexOf")
+				{
+					var cat = fruits.lastIndexOf("Apple");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="pop")
+				{
+					var cat = fruits.pop();
+					document.getElementById("output").innerHTML = fruits;
+				}
+				if(a=="shift")
+				{
+					var cat = fruits.shift();
+					document.getElementById("output").innerHTML = fruits;
+				}
+				if(a=="push")
+				{
+					var cat = fruits.push("kiwi");
+					document.getElementById("output").innerHTML = fruits;
+				}
+				if(a=="unshift")
+				{
+					var cat = fruits.unshift("kiwi");
+					document.getElementById("output").innerHTML = fruits;
+				}
+				if(a=="concat")
+				{
+					var cat = fruits.concat(veg);
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="join")
+				{
+					var cat = fruits.join("   and ");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="reverse")
+				{
+					var cat = fruits.reverse("   and ");
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="sort")
+				{
+					var cat = fruits.sort();
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="slice")
+				{
+					var cat = fruits.slice(1,3);
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="splice")
+				{
+					var cat = fruits.splice(2,2,"lemon","kiwi");
+					document.getElementById("output").innerHTML = fruits;
+				}
+				if(a=="toString")
+				{
+					var cat = fruits.toString();
+					document.getElementById("output").innerHTML = cat;
+				}
+				if(a=="valueOf")
+				{
+					var cat = fruits.valueOf();
+					document.getElementById("output").innerHTML = cat;
+				}
+			}
+			// function submit()
+			// {
+			// 	debugger;
+			// 	var m = document.getElementById("arr_ops").value;
+			// 	var y = document.getElementById("arr_ops_2").value;
+			// 	var z = m.concat(y);
+			// 	document.getElementById("output").innerHTML = z;
+			// }
+		</script>
+	</head>
+	<body>
+		<h2>ARRAY OPERATIONS</h2>
+		<h3>Enter the Array:</h3>
+		<input type="text" style="display:none;" id="arr_ops"/>
+		<input type="text" style="display:none;" id="arr_ops_2"/>
+		<select id="charat" onchange ="arrayops(this.value)">
+			<option value=""></option>
+			<option value="concat">concat()</option>
+			<option value="indexOf">indexOf()</option>
+			<option value="join">join()</option>
+			<option value="lastIndexOf">lastIndexOf()</option>
+			<option value="pop">pop()</option>
+			<option value="push">push()</option>
+			<option value="reverse">reverse()</option>
+			<option value="shift">shift()</option>
+			<option value="sort">sort()</option>
+			<option value="slice">slice()</option>
+			<option value="splice">splice()</option>
+			<option value="toString">toString()</option>
+			<option value="unshift">unshift()</option>
+			<option value="valueOf">valueOf()</option>
+		</select>
+		<div >
+		<input type="button" onclick ="submit()" name="submit" value="submit" id="submit" style = "display:none;">
+		</div>
+		<h4>Output: <span id="output"></span></h4>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+//Recursive > A function call the function itself //
+
+<!Doctype html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h2>Factorial</h2>
+		<h3>Enter the number:</h3>
+		<input type="text" id="factorial" />
+		<input type="button" id="submit" value="clickme" onclick="callFact()"/>
+		<h4>Output: <span id="demo"></span></h4>
+		<script type="text/javascript">
+		
+		
+			function fact(a)
+			{
+				
+				if( a==1)
+				{
+					return 1;
+				}
+				else
+				{
+					return a * fact(a-1);
+				}
+				
+			}
+			function callFact(){
+				var x= document.getElementById("factorial").value;
+				var y= parseInt(x);
+				document.getElementById("demo").innerHTML = fact(y);
+			}
+		
+		</script>
+	</body>
+</html>

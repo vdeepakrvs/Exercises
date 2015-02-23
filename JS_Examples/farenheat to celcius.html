@@ -1,0 +1,45 @@
+//count the farenheat to celcius //
+
+<!Doctype html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h2>calculate farenheat to celcius</h2>
+		<h3>Enter the number:</h3>
+
+		<input type="text" id="cel" />
+		<!-- <input type="text" id="far" /> -->
+		<input type="button" id="submit" value="clickme" onclick="tocelcius()"/>
+		<!--<select id="submit" onchange="degree(this.value)">
+			<option value=""></option>
+			<option value="celcius">celcius</option>
+			<option value="Farenheat">Farenheat</option>
+		</select> -->
+		<h4>Output: <span id="demo1"></span></h4>
+<!-- 		<h4>Output: <span id="demo2"></span></h4> -->
+		<script type="text/javascript">
+			
+				function tocelcius()
+				{
+					debugger;
+					var e = document.getElementById("cel").value;
+					var f = parseInt(e);
+					var w = (5/9) * (f-32);
+					document.getElementById("demo1").innerHTML = "The temperature is" + " " + w +" " + "celcius";
+				}
+			
+
+			// function tofarenheat()
+			// {
+			// 	var y = document.getElementById("far").value;
+			// }
+				
+			// 	//document.getElementById("demo1").innerHTML = w;
+			// 	//document.getElementById("demo2").innerHTML = z;
+			// }
+			
+		</script>
+	</body>
+</html>

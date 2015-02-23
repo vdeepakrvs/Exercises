@@ -1,0 +1,24 @@
+//count the string occurance > count the string occurance//
+
+<!Doctype html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h2>count the string occurance</h2>
+		<h3>Enter the text:</h3>
+		<input type="text" id="occur" />
+		<input type="button" id="submit" value="clickme" onclick="stringoccur()"/>
+		<h4>Output: <span id="demo"></span></h4>
+		<script type="text/javascript">
+			
+			function stringoccur()
+			{
+				var x = document.getElementById("occur").value;
+				var y = x.match(/the/gi).length;
+				document.getElementById("demo").innerHTML = y;
+			}
+		</script>
+	</body>
+</html>

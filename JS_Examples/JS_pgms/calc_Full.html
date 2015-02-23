@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+<head>
+	<style>
+	.bodybg{
+	background-color: gray;
+	height:
+	}
+	.formbody{
+	float: center;
+	background-color: gray;
+	display: inline-block;
+	border: 2px inset black;
+	
+	
+	}
+	</style>
+</head>
+<body class="bodybg">
+	<div class="bodybg">
+		<form name="f1" class="formbody">
+			<div>
+				<input type="text" name="result" id="demo" size = "20" maxlength="4" placeholder="">
+			</div>
+			<div>
+				<div>
+					<INPUT TYPE="button" NAME="one"   VALUE="  1  " OnClick="f1.result.value += '1'">
+					<INPUT TYPE="button" NAME="two"   VALUE="  2  " OnCLick="f1.result.value += '2'">
+					<INPUT TYPE="button" NAME="three" VALUE="  3  " OnClick="f1.result.value += '3'">
+					<INPUT TYPE="button" NAME="plus"  VALUE="  +  " OnClick="f1.result.value += ' + '">
+				</div>
+				<div>
+					<INPUT TYPE="button" NAME="four"  VALUE="  4  " OnClick="f1.result.value += '4'">
+					<INPUT TYPE="button" NAME="five"  VALUE="  5  " OnCLick="f1.result.value += '5'">
+					<INPUT TYPE="button" NAME="six"   VALUE="  6  " OnClick="f1.result.value += '6'">
+					<INPUT TYPE="button" NAME="minus" VALUE="  -  " OnClick="f1.result.value += ' - '">
+				</div>
+				<div>
+					<INPUT TYPE="button" NAME="seven" VALUE="  7  " OnClick="f1.result.value += '7'">
+					<INPUT TYPE="button" NAME="eight" VALUE="  8  " OnCLick="f1.result.value += '8'">
+					<INPUT TYPE="button" NAME="nine"  VALUE="  9  " OnClick="f1.result.value += '9'">
+					<INPUT TYPE="button" NAME="times" VALUE="  x  " OnClick="f1.result.value += ' * '">
+				</div>
+				<div>
+					<INPUT TYPE="button" NAME="clear" VALUE="  c  " OnClick="f1.result.value = ''">
+					<INPUT TYPE="button" NAME="zero"  VALUE="  0  " OnClick="f1.result.value += '0'">
+					<INPUT TYPE="button" NAME="equalto"  VALUE="  =  " OnClick="f1.result.value = eval(f1.result.value)">
+					<INPUT TYPE="button" NAME="div"   VALUE="  /  " OnClick="f1.result.value += ' / '">
+				</div>
+			</div>
+		</form>
+	</div>
+</body>	
+</html>

@@ -1,0 +1,48 @@
+//Fibnossi_Latest_Deepak//
+
+<!Doctype html>
+<html>
+<head>
+	<script type="text/javascript">
+	function fib()
+	{
+		var n1=0,n2=1, n3, y='';
+		var x = document.getElementById("input1").value;
+		if((x)!="")
+		{
+			
+			y += "<br/>";
+			y += n1; 
+			y += "<br/>";
+			y += n2; 
+
+		while(x>2)
+		{
+
+			n3=n1+n2;
+			n1=n2;
+			n2=n3;
+			y += "<br/>";
+			y += n3;
+			x--;
+		}
+
+		}
+	
+	document.getElementById("demo").innerHTML =  y;
+	}
+
+	</script>
+</head>
+<body>
+	<div style="padding:20px;">
+		Enter the limit u want <input type="text" id="input1" />
+	</div>
+	<div style="padding:20px;">
+		<input type="button" id="btn" value="Submit" onclick="fib()">
+	</div>
+	<div style="padding:20px;" id="demo">
+	The result is:
+	</div>
+</body>
+</html>

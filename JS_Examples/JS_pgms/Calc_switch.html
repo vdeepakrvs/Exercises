@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+	<head>
+		<script>
+		function calc(a){
+		var x = document.getElementById("input1").value;
+		var y = document.getElementById("input2").value;
+		var abc = "Please Enter your operator here to apply on your numbers", "";
+		var aa;
+		switch(abc){
+		case '+': 
+		aa = document.write((parseInt(x)+ parseInt(y)));
+		break;
+		case '-': 
+		aa = document.write((parseInt(x)- parseInt(y)));
+		break;
+		case '*': 
+		aa = document.write((parseInt(x)* parseInt(y)));
+		break;
+		case '/': 
+		aa = document.write((parseInt(x)/ parseInt(y)));
+		break;
+		default:
+		aa = "No value";
+		}
+		}
+		</script>
+	</head>
+	<body>
+	Enter the first value:
+	<input type="text" name =" Enter the first value" id="input1" ></br></br></br>
+	Enter sencond value:
+	<input type="text" name=" Enter sencond value" id="input2" ></br></br>
+	<button value ="add" onclick="calc(this.value)"> + </button>
+	<button value ="sub" onclick="calc(this.value)"> - </button>
+	<button value ="mul" onclick="calc(this.value)"> * </button>
+	<button value ="div" onclick="calc(this.value)"> / </button>
+	<input type="text" name="result"  id="demo" />
+	</body>
+</html>

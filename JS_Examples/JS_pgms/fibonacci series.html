@@ -1,0 +1,46 @@
+fibnossi series
+
+<!Doctype html>
+<html>
+<head>
+	<script>
+		function fib()
+		{
+			var n1=0, n2=1, n3;
+			var x = document.getElementById("limit_value").value;
+			if ((x)!= "")
+				{
+				var y = document.getElementById("demo");
+				y.innerHTML = "";
+				y.innerHTML +="</br>";
+				y.innerHTML += n1 + "</br>";
+				y.innerHTML += n2 + "</br>";
+				while (x>2)
+				{
+				n3=n1+n2;
+				n1=n2;
+				n2=n3;
+				y.innerHTML += n3 + "</br>";
+				x--;
+				}
+				}		
+			else 
+				{
+				document.getElementById("demo").innerHTML="Enter a value";
+				}
+		}
+	</script>
+</head>
+<body>
+	<div>
+	Enter the limit:
+		<input id="limit_value" type="text" />
+	</div>
+	<div>
+		<input type="button" value="Submit" id="submit1" onclick="fib()" />
+	</div>
+	The result is : 
+	<div id="demo">
+	</div>
+</body>
+</html>
