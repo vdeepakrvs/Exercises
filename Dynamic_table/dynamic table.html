@@ -1,0 +1,70 @@
+<!Doctype html>
+<html>
+	<head>
+		<style>
+		.rows{
+			padding: 10px;
+		}
+		body{
+				background-color: grey;
+				font-weight: bold;
+				font-size: 18px;
+				}
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+		</script>
+		<script>
+		$.ajax(
+			{
+	 		 type: "GET",
+	 		 url: "http://ergast.com/api/f1/2013/driverStandings.json",
+	 		 dataType: "json",
+	  		 success:function(data){	  		 
+			          debugger;
+			          var x ="<table><tbody><tr>"+data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.givenName+"</tr></tbody></table>"
+			          $('body').append(x);
+			         }
+			});
+
+					function addTable() {
+						var xx = document.getElementById("finaltable");
+			       	    var yy = document.createElement('TABLE');
+			    		yy.border='1';	
+			    		yy.align='center';		    
+			    		var tb = document.createElement('TBODY');
+					    yy.appendChild(tb);			      
+			 		   		for (var i=0; i<=23; i++){
+					        var tr = document.createElement('TR');
+					        tb.appendChild(tr);
+				       		for (var j=0; j<=4; j++){
+				            var td = document.createElement('TD');
+				            td.width='75';
+				            td.appendChild(document.createTextNode("example"));
+				            tr.appendChild(td);
+			       }
+			    }
+			    xx.appendChild(yy);
+			    
+			}
+ 		</script>
+	</head>
+	<body>
+		<div>
+		</div>
+		<div id="finaltable">
+			<input type="button" id="create" value="Click here" onclick="addTable()">
+		</div>
+<!-- 
+		<table>
+			<tr>
+				<td  class="rows">POS</td>
+				<td  class="rows">Driver</td>
+				<td  class="rows">Nationality</td>
+				<td  class="rows">Team</td>
+				<td  class="rows">Points</td>
+			</tr>
+		</table> -->
+	</body>
+</html>
+
+
